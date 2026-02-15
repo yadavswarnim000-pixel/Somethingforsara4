@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sara ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ffd6e7, #ffe9f3);
+      overflow-x: hidden;
+      color: #333;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #ff4d88;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #ff4d88;
+    }
+
+    p {
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      background: #ff4d88;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      margin: 10px;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: #ff1a66;
+    }
+
+    /* Floating Hearts */
+    .heart {
+      position: fixed;
+      width: 15px;
+      height: 15px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 8s infinite ease-in;
+      opacity: 0.6;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      width: 15px;
+      height: 15px;
+      background: red;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart::before { top: -7px; left: 0; }
+    .heart::after { left: -7px; top: 0; }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(45deg); }
+      100% { transform: translateY(-10vh) rotate(45deg); }
+    }
+
+    /* Cards */
+    .card {
+      background: white;
+      padding: 25px;
+      margin: 15px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      max-width: 500px;
+    }
+
+    /* Meme placeholders */
+    .meme {
+      width: 250px;
+      height: 250px;
+      background: #ffe0ef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      margin: 15px;
+      transition: 0.3s;
+    }
+
+    .meme:hover {
+      transform: scale(1.08) rotate(1deg);
+    }
+
+    /* Final Screen */
+    #finalMessage {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #ffb3d9, #ffd6e7);
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      z-index: 999;
+    }
+
+    /* Confetti Hearts */
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: red;
+      animation: fall 3s linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10vh); }
+      100% { transform: translateY(110vh); }
+    }
+
+    /* Music Toggle */
+    #musicToggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ff4d88;
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.2rem;
+    }
+
+    @media(max-width: 768px) {
+      h1 { font-size: 2.2rem; }
+    }
+  </style></head>
+<body><!-- Floating Hearts --><script>
+  for (let i = 0; i < 20; i++) {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+    document.body.appendChild(heart);
+  }
+</script><!-- Landing --><section>
+  <h1>Hey Sara ❤️</h1>
+  <p>I know efforts matter so here I am 😅.(right bottom icon press for music)</p>
+  <button onclick="scrollToSection('letters')">Open Message</button>
+</section><!-- Letters --><section id="letters">
+  <div class="card">
+    <h2>Why I Like You</h2>
+    <p>See sara it is like this. I like cats right and you like cats right,so from eq1 & eq2 we can say that ' i like u👉🏻👈🏻'</p>
+  </div>  <div class="card">
+    <h2>Memories</h2>
+    <p>I know that we don't have that much memories,but i really miss our late night talks.😭 i really want to make fun & good memories with you 🫵🏻 </p>
+  </div>  <div class="card">
+    <h2>Things I Admire</h2>
+    <p>SARA being honest I really admire every thing abt u, Like u have every quality i want- ur funny, ur smart,ur beautiful,ur bit naughty 😜 and so on. And idk how u think abt me but i have started gym so I'll be a model very soon 😂jk I'll try my best to be that. </p>
+  </div>
+</section><!-- Memes --><section>
+  <h2>visual representations of me💟</h2>  <div class="meme"><img src="waitingfortext.jpg" style="width:200px; height: auto; border-radius:15px;"></div>
+  <div class="meme"><img src="buddha.jpg" style="width:230px; height:auto; border-radius:15px;"> </div>
+  <div class="meme"><img src="mitsuri.png" style="width:230px; height:auto; border-radius:15px;"></div>
+</section><!-- Final Card --><section>
+  <div class="card">
+    <h2>Sara, will you be my Valentine? ❤️</h2>
+    <button id="yesBtn">YES 💖</button>
+    <button id="noBtn">NO 💔</button>
+  </div>  <div id="noMeme" style="display:none;">
+    <div class="card">
+      <h2>Nice try. That option expired 😌</h2>
+      <p>REALLY MAN I'M THIS BAD HUHH😭 </p>
+      <img src="file_0000000027b461f8861f298cbedd5552 (1).png"
+         style="width:250px; height:auto; border-radius:15px;">
+
+    <br><br>
+      <button onclick="forceYes()">Okay fine… YES 💖</button>
+    </div>
+  </div>
+</section><!-- Final Screen --><div id="finalMessage">
+  <h1>YAYYY ❤️</h1>
+  <p>MAN!! finally i made you do this.💛</p>
+</div><!-- Music --><audio id="bgMusic" loop>
+  <source src="VS42 - Kaafi Hai (Campus Diaries)(onlymusic.in).mp3" type="audio/mpeg">
+</audio>
+<button id="musicToggle">🎵</button><script>
+ function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
+/* ---------- NO BUTTON LOGIC ---------- */
+
+let noClicks = 0;
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("click", () => {
+
+  noClicks++;
+
+  // 1st & 2nd click → button jumps
+  if (noClicks < 3) {
+
+    const x = Math.random() * (window.innerWidth - 120);
+    const y = Math.random() * (window.innerHeight - 80);
+
+    noBtn.style.position = "fixed";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  }
+
+  // 3rd click → show meme
+  else {
+
+    noBtn.style.display = "none";
+
+    document.getElementById("noMeme").style.display = "block";
+  }
+
+});
+
+/* ---------- YES LOGIC ---------- */
+
+document
+  .getElementById("yesBtn")
+  .addEventListener("click", showFinal);
+
+function forceYes() {
+  showFinal();
+}
+
+function showFinal() {
+
+  document.getElementById("finalMessage").style.display = "flex";
+
+  startConfetti();
+}
+
+/* ---------- CONFETTI ---------- */
+
+function startConfetti() {
+
+  for (let i = 0; i < 50; i++) {
+
+    const c = document.createElement("div");
+
+    c.className = "confetti";
+
+    c.style.left = Math.random() * 100 + "vw";
+    c.style.animationDuration =
+      (2 + Math.random() * 3) + "s";
+
+    document.body.appendChild(c);
+  }
+}
+
+/* ---------- MUSIC ---------- */
+
+const music = document.getElementById("bgMusic");
+
+document
+  .getElementById("musicToggle")
+  .onclick = () => {
+
+    if (music.paused) music.play();
+    else music.pause();
+  };
+
+</script></body>
+</html>
